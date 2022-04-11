@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "28199a53-583d-4684-88ae-28b8885b4356",
+		"name": "NTTDATA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Crear cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Juan Osorio\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 25,\r\n    \"identificacion\": \"098874587\",\r\n    \"direccion\": \"13 junio y Equinoccial\",\r\n    \"telefono\": \"098874587\",\r\n    \"contrasenia\": \"1245\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/Clientes",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/Clientes",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar cliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Carlos Mantilla\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 27,\r\n    \"identificacion\": \"0940864710\",\r\n    \"direccion\": \"Barcelona\",\r\n    \"telefono\": \"0963656851\",\r\n    \"contrasenia\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/Clientes/3",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/Clientes/3",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Clientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuentas",
+			"item": [
+				{
+					"name": "Crear cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"numeroCuenta\": \"496825\",\r\n  \"tipoCuenta\": 1,\r\n  \"saldoInicial\": 540,\r\n  \"clienteId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/Cuentas",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar cuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/Cuentas",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Cuentas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Generar estado cuenta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/Reportes?clienteId=2&fechaInicio=2022-04-10&fechaFin=2022-04-10",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Reportes"
+							],
+							"query": [
+								{
+									"key": "clienteId",
+									"value": "2"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2022-04-10"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2022-04-10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimientos",
+			"item": [
+				{
+					"name": "Crear movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoMovimiento\": 2,\r\n  \"valor\": 540,\r\n  \"cuentaId\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/Movimientos",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"Movimientos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "endpoint",
+			"value": "http://localhost:25197",
+			"type": "default"
+		}
+	]
+}
