@@ -77,7 +77,7 @@ namespace Service
             var movimientos = await _MovimientoRepository.GetAll(new Domain.Queries.MovimientoQuery
             {
                 CuentaId = cuentaId,
-                Fecha = System.DateTime.Now
+                Fecha = System.DateTime.Now.Date
             });
             return movimientos.Where(e => e.Valor < 0).Sum(m => m.Valor);
         }

@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{0A4D8EE7-4F25-4F93-9A5D-74C7FEBEB36A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{4D314A46-E6DD-496D-BAEC-75F3D0BF672A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{4D314A46-E6DD-496D-BAEC-75F3D0BF672A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI", "DI\DI.csproj", "{7B907E3A-FA2F-4D01-89DA-27C895111415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DI", "DI\DI.csproj", "{7B907E3A-FA2F-4D01-89DA-27C895111415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{D3D4917B-9783-4243-A873-7568289EDAAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "App", "App\App.csproj", "{D3D4917B-9783-4243-A873-7568289EDAAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApi", "TestApi\TestApi.csproj", "{B7A207BA-35A9-43AE-911D-42FDFEC28B89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D3D4917B-9783-4243-A873-7568289EDAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3D4917B-9783-4243-A873-7568289EDAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3D4917B-9783-4243-A873-7568289EDAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A207BA-35A9-43AE-911D-42FDFEC28B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A207BA-35A9-43AE-911D-42FDFEC28B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A207BA-35A9-43AE-911D-42FDFEC28B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A207BA-35A9-43AE-911D-42FDFEC28B89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
